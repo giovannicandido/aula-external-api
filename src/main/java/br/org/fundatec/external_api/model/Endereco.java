@@ -19,4 +19,5 @@ public class Endereco {
     private String gia;
     private String ddd;
     private String siafi;
+
 }

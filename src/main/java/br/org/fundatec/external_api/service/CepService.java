@@ -15,7 +15,7 @@ public class CepService {
         String api = getAddressApiUrl(cep);
         // ResponseEntity<Endereco> enderecoEntity = restTemplate.getForEntity(api, Endereco.class);
         EnderecoViaCep enderecoViaCep = restTemplate.getForObject(api, EnderecoViaCep.class);
-        Endereco endereco = Mappers.getMapper(EnderecoViaCepMapper.class).toModel(enderecoViaCep);
+        Endereco endereco = EnderecoViaCepMapper.toModel(enderecoViaCep);
         //Endereco endereco = EnderecoViaCepMapp
         return endereco;
 
